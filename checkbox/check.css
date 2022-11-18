@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#wrapper{
+    height: 100vh;
+    background-color: rgb(85, 211, 85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    height: 30vh;
+    width: 30vw;
+    background-color: rgb(135, 255, 135);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box .innerbox{
+    border: 1px solid black;
+    border-radius: 2rem;
+    height: 3rem;
+    width: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgb(85, 211, 85);
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+.box .innerbox input{
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    opacity: 0;
+}
+
+.box .innerbox .slider{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    transition-property: left background-color;
+    transition-duration: 1s;
+    background-color: white;
+    transition-timing-function: ease-out;
+}
+
+
+.box .innerbox input:checked + .slider{
+    left: 5.2rem;
+    background-color: green;
+}
+
+.box .innerbox input:checked + .innerbox{
+    background-color: rgb(255, 255, 255);
+}
